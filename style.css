@@ -1,0 +1,174 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../../bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100vw;
+    color: #fff;
+}
+
+#ddos {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    width: 60%;
+    max-width: 900px;
+    margin: 60px auto;
+    z-index: 5;
+}
+
+.step { display: none; }
+.step.active { display: block; }
+.step h2 { text-align: center; margin-bottom: 20px; color: #00d5ff; }
+
+button {
+    background: linear-gradient(135deg, #00bfff, #007bff);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 12px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(0, 123, 255, 0.5);
+}
+button:disabled {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+}
+
+.buttons-group,
+.wide-button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.buttons-group button,
+.wide-button-group button { flex: 1; }
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+.form-grid label { margin: 6px 0 4px; font-weight: 600; font-size: 0.95em; color: #f1f1f1; }
+.form-grid input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 0.95em;
+    outline: none;
+    transition: 0.3s;
+}
+.form-grid input:focus {
+    background: rgba(255,255,255,0.15);
+    border-color: #00bfff;
+    box-shadow: 0 0 8px rgba(0,191,255,0.6);
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(0,0,0,0.3);
+    color: #00ff88;
+    font-family: monospace;
+    font-size: 0.95em;
+}
+
+.total-size,
+.attack-info,
+.expiration-info {
+    margin-top: 12px;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #eee;
+    text-align: left;
+}
+
+.live-container {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+    align-items: flex-start;
+}
+.live-log { flex: 2; display: flex; flex-direction: column; }
+.live-params {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+.live-params h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    color: #00d5ff;
+    text-align: center;
+}
+.live-params label { margin-top: 10px; font-size: 0.9em; font-weight: bold; color: #eee; }
+.live-params input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+.live-params button {
+    margin-top: 15px;
+    padding: 10px;
+    background: linear-gradient(135deg,#00bfff,#007bff);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.live-params button:hover { background: linear-gradient(135deg,#007bff,#0056b3); }
+
+/* === RIGHT PANEL === */
+#networkChartContainer {
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    width: 280px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px) saturate(160%);
+    -webkit-backdrop-filter: blur(12px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    z-index: 10;
+    gap: 20px;
+}
+#networkChart, #latencyChart { width: 100%; height: 120px; }
