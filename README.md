@@ -15,9 +15,13 @@ We are not responsible for any issues caused by use outside a local network!
 4. 
 ---
 
-## Screenshot
+## Load Test Screenshot
 
-<img width="595" height="492" alt="Snímka obrazovky 2025-09-18 o 1 31 26" src="https://github.com/user-attachments/assets/1a6f8aa7-44c2-4039-881b-f9f85450963c" />
+Below is a real example of network load during packet sending.  
+This screenshot shows **actual traffic data** captured while running the tool in a controlled local environment.  
+It illustrates how the server resources and bandwidth respond under stress testing.
+
+<img width="595" height="492" alt="Screenshot – Real load data" src="https://github.com/user-attachments/assets/1a6f8aa7-44c2-4039-881b-f9f85450963c" />
 
 ---
 
