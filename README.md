@@ -15,6 +15,13 @@ We are not responsible for any issues caused by use outside a local network!
 4. 
 ---
 
+## Screenshot
+
+<img width="595" height="492" alt="Snímka obrazovky 2025-09-18 o 1 31 26" src="https://github.com/user-attachments/assets/1a6f8aa7-44c2-4039-881b-f9f85450963c" />
+
+---
+
+
 ## File structure
 
 - `index.php` – main interface  
